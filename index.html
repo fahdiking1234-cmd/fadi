@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div id="lock-screen" class="hidden fixed inset-0 bg-black z-50 flex flex-col items-center justify-center p-4">
+        <i class="fas fa-lock text-6xl text-yellow-500 mb-4"></i>
+        <h2 class="text-2xl mb-4">Website is Locked</h2>
+        <input type="password" id="unlock-pin" placeholder="Enter PIN" class="p-3 rounded bg-gray-800 border border-gray-700 mb-4">
+        <button onclick="unlockSystem()" class="bg-blue-600 px-8 py-2 rounded-full font-bold">Unlock</button>
+    </div>
+
+    <div id="main-content">
+        <nav class="p-4 dynamic-bg shadow-lg flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img id="site-logo" src="" alt="Logo" class="h-10 w-10 rounded-full hidden">
+                <h1 id="site-name" class="text-xl font-bold">Loading...</h1>
+            </div>
+            <button onclick="toggleMenu()" class="text-2xl"><i class="fas fa-bars"></i></button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden p-4 bg-gray-800 space-y-3"></div>
+
+        <div class="container mx-auto p-6">
+            <div id="tools-grid" class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
